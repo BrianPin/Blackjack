@@ -1,0 +1,47 @@
+Shao-Huang's BlackJack(SHBJ) Game in command line mode
+======================================================
+
+Overview
+--------
+The BlackJack game is based on a popular card game: "Black Jack". This game is
+not as complex as the real "Black Jack" game. For example, the real game has
+the following rules:
+1. Dealer must hit soft 17
+2. Multiple players and positions
+3. Player is allowed to split
+4. Player is allowed to use insurance strategy
+
+In "MY" game design, the rules are simple:
+1. Dealer must hit soft 17
+2. Only one player versus dealer
+3. Player is not able to split
+4. Player is not able to have insurance strategy
+5. The maximum bet allowed is 5000, the minimum bet allowed is 50
+6. Player input his initial cash amount in the beginning of the game
+7. Player input his bet in the beginning of each round
+
+Object-Oriented Game Design:
+----------------------------
+The command line game is written in C++. The major components are:
+
+Card class:   used to represent cards in the game.
+Deck class:   used to shuffle the cards and store the cards
+Player class: represent a player and his possible actions, also his game states
+Dealer class: It is a kind of Player, but behaves a little bit different
+Game class:   Handles the init, round_play, round_init, round_end of a game
+
+Compilation and Build:
+----------------------
+The game is developed under the Xcode(3.2.2 64-bit) version and built and tested
+under Debug|x86_64 environment. It has a project file: shbj.xcodeproj.
+The file can be read into Xcode IDE and build the project
+
+Card notations in texts:
+------------------------
+The original cards divides in 4 suits:
+SPADES, HEARTS, DIAMONDS, CLUBS
+And 13 different ranks:
+ACE, 2, 3, ... , 10, JACK, QUEEN, KING
+My program will display a card using: suit(rank) notation.
+For example:
+CLUBS(3), CLUBS(ACE), SPADES(JACK) ... etc.
